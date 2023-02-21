@@ -1,0 +1,48 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <title>Meme Gallery</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+  <section class="ftco-section">
+      <div class="cursor-outer d-none d-md-block"></div>
+      <nav class="navbar navbar-light py-3 px-0 overflow-hidden">
+        <div class="container px-md-5">
+          <div class="row w-100 g-0 justify-content-between">
+            <div class="col-8">
+              <div class="d-inline-block"><a class="navbar-brand pt-0 fs-3 text-black d-flex align-items-center" href="{% url 'home' %}"><img class="img-fluid" src="{% static 'assets/img/icons/logo-icon.png' %}" alt="" /><span class="fw-bolder ms-2">Foto</span><span class="fw-thin">gency</span></a></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      {% block content %}
+      {% endblock %}
+	</section>
+  <script>
+    var check = function() {
+    if (document.getElementById('password').value ==
+      document.getElementById('re_password').value) {
+      document.getElementById('message').style.color = 'green';
+      document.getElementById('message').innerHTML = 'matching';
+    } else {
+      document.getElementById('message').style.color = 'red';
+      document.getElementById('message').innerHTML = 'not matching';
+    }
+    }
+    </script>
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/popper.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>

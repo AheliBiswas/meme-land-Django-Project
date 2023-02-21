@@ -1,0 +1,52 @@
+{% extends 'main.html' %}
+{% block content %}
+<!-- Pills navs -->
+  <!-- Pills navs -->
+  
+  <!-- Pills content -->
+  <div class="tab-content container p-5">
+    <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert {{message.tags}}" role="alert">
+          <button type="button" class="close pl-2" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+          {{ message }}
+        </div>
+        {% endfor %}
+      {% endif %}
+      <form method="POST" action="">
+        {% csrf_token %}
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="loginName" class="form-control" name="username" />
+          <label class="form-label" for="loginName">Email or username</label>
+        </div>
+  
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="loginPassword" class="form-control"  name="password"/>
+          <label class="form-label" for="loginPassword">Password</label>
+        </div>
+  
+        <!-- 2 column grid layout -->
+        <div class="row mb-4">
+          <div class="col-md-6 d-flex justify-content-center">
+            <!-- Simple link -->
+            <a href="#!">Forgot password?</a>
+          </div>
+        </div>
+  
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+  
+        <!-- Register buttons -->
+        <div class="text-center">
+          <p>Not a member? <a href="{% url 'register' %}">Register</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Pills content -->
+{% endblock %}

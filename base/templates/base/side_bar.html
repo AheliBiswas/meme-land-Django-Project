@@ -1,0 +1,4 @@
+<li class="nav-item"><a class="nav-link p-0 py-md-2 isotope-nav active" href="{% url 'home' %}" data-filter="*">All</a></li>
+{% for genre in genres %}
+<li class="nav-item"><a class="nav-link p-0 py-md-2 isotope-nav" href="{% url 'homefilter' genre.id %}" data-filter=".{{genre.title}}">{{genre.title}}</a></li>
+{% endfor %}

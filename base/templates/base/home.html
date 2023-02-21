@@ -1,0 +1,56 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<div class="row p-3">
+  <div class="col-md-8">
+    <form method="GET" action="{% url 'home' %}">
+      <div class="form-floating mb-5 position-relative text-200">
+        <input class="form-control form-fotogency-header-control text-200" id="search" type="text" name="search_item" placeholder="search here" />
+        <label class="text-300 mb-1" for="search" >Search</label>
+        <div class="position-absolute end-0 top-0">
+          <button class="btn shadow-none px-0" type="submit"><img class="ms-3" src="{% static 'assets/img/icons/long-arrow.png' %}" alt="" /></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+    <!-- Alert tags -->
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert {{message.tags}}" role="alert">
+      {{ message }}
+    </div>
+    {% endfor %}
+  {% endif %}
+
+  <div class="container pt-2">
+    <div class="pb-4 col-md-4">
+      {% if request.user.is_authenticated %}
+      <a class="" href="{% url 'upload-image' %}">
+        <button class="btn btn-primary btn-sm" style="background-color: #f59300;">Upload Image</button>
+        </a>
+        {% endif %}
+    </div>
+    <div class="row g-3" data-isotope='{"layoutMode":"packery"}'>
+      {% for image in images%}
+      <div class="col-lg-3 col-sm-6 col-12 {{genre.title}} gallery-item isotope-item"><img class="img-fluid w-100" src="{{image.image.url}}" alt="" data-glightbox="title: {{image.title}}; by: {{image.user}}"/><a href="{{image.image.url}}" download style="text-decoration: none;">Download  <i class="bi bi-cloud-arrow-down-fill"></i></a></div>
+      {% endfor %}
+    </div>
+    <!-- <div class="row row-cols-1 row-cols-md-3 g-4">
+      {% for image in images%}
+        <div class="col">
+        <div class="card">
+            <img src="{{image.image.url}}" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+            <div class="card-body">
+            <h5 class="card-title">{{image.title}}</h5>
+            <p class="card-text">
+              {{image.user}}
+            </p>
+            <a href="{{image.image.url}}" download class="btn btn-primary">Download</a>
+            </div>
+        </div>
+        </div>
+        {% endfor %}
+    </div> -->
+  </div>
+{% endblock %}

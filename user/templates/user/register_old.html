@@ -1,0 +1,51 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div class="tab-pane container p-5" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+    <h3>Register</h3>
+        <!-- Alert tags -->
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert {{message.tags}}" role="alert">
+          <button type="button" class="close pl-2" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+          {{ message }}
+        </div>
+        {% endfor %}
+      {% endif %}
+    <form method="POST" action="">
+        {% csrf_token %}
+      <div class="text-center mb-3">
+      <!-- Username input -->
+      <div class="form-outline mb-4">
+        <input type="text" id="registerUsername" class="form-control" name="username" />
+        <label class="form-label" for="username">Username</label>
+      </div>
+
+      <!-- Email input -->
+      <div class="form-outline mb-4">
+        <input type="email" id="registerEmail" class="form-control" name="email"/>
+        <label class="form-label" for="email">Email</label>
+      </div>
+
+      <!-- Password input -->
+      <div class="form-outline mb-4">
+        <input type="password" id="registerPassword" class="form-control" name="password" />
+        <label class="form-label" for="password">Password</label>
+      </div>
+
+      <!-- Repeat Password input -->
+      <div class="form-outline mb-4">
+        <input type="password" id="registerRepeatPassword" class="form-control" name="re_password" />
+        <label class="form-label" for="re-password">Repeat password</label>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
+      <div class="text-center">
+        <p>Already a member? <a href="{% url 'login' %}">Login</a></p>
+      </div>
+    </form>
+  </div>
+  {% endblock %}
