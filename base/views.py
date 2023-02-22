@@ -3,6 +3,7 @@ from .models import imageUpload,Genre
 from .form import ImageUploadForm
 from django.contrib import messages
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def home(request):
@@ -17,6 +18,7 @@ def home(request):
     context = {'images':images,'genres':genres,'page':page}
     return render(request,'base/home.html',context)
 
+@login_required(login_url='login')
 def upload_image(request):
     page = 'Upload'
     genres = Genre.objects.all()

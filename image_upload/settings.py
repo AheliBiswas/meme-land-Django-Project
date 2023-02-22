@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-2p@1fep42&us3e_*k4#u86#8!jd9lw9i5vwb16iuazu35_$(gr'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -138,3 +138,10 @@ MEDIA_ROOT = BASE_DIR/'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'Your email'
+EMAIL_HOST_PASSWORD = 'Your Password'
