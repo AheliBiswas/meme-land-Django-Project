@@ -9,6 +9,7 @@ from django.core.mail import send_mail
 import uuid
 # Create your views here.
 def loginPage(request):
+    page='meme-land-login'
     if request.user.is_authenticated:
         return redirect('home')
 
@@ -32,13 +33,15 @@ def loginPage(request):
         else:
             messages.error(request,'Your account has not been verified')
             return redirect('register')
-    return render(request,'user/login.html')
+    context = {'page':page}
+    return render(request,'user/login.html',context)
 
 def logoutPage(request):
     logout(request)
     return redirect('home')
 
 def registerPage(request):
+    page='meme-land-register'
     if request.user.is_authenticated:
         return redirect('home')
 
@@ -67,7 +70,8 @@ def registerPage(request):
             return redirect('login')
         except Exception as e:
             print(e)
-    return render(request,'user/register.html')
+    context = {'page':page}
+    return render(request,'user/register.html',context)
 
 
 # email sending operation
@@ -86,3 +90,41 @@ def verify(request,token):
         user.save()
         messages.success(request,'Your email has been successfully verified')
         return redirect('login')
+
+
+# Password Recovery
+def getEmail(request):
+    page='meme-land-get-mail'
+    if request.method == 'POST':
+        email = request.POST.get('re_email')
+        user = User.objects.get(email=email)
+        if user is not None:
+            token = user.profile.verification_id
+            messages.success(request, 'Verification mail has been send to you')
+            passwordRecoveryMail(email,token)
+        else:
+            messages.error(request,'email does not exists ')
+
+    context = {'page':page}
+    return render(request,'user/email_recovery.html',context)
+
+def passwordRecoveryMail(email,token):
+    subject = 'Password Recovery.Thank you for being a beta-user UwU'
+    messages = f'Hi, This is Aheli the creater of Meme-Land.As you are a beta-user and project is still in beta phase you may get the mail in spam.This is your recovery password link http://127.0.0.1:8000/user/forget-password/{token}'
+    email_from = settings.EMAIL_HOST_USER
+    recipient_list = [email]
+    send_mail(subject,messages,email_from,recipient_list)   
+
+def forgetPassword(request,token):
+    page='meme-land-set-password'
+    user = Profile.objects.get(verification_id = token)
+    if request.method == 'POST':
+
+        password = request.POST.get('password')
+        if user:
+            user.user.set_password(password)
+            user.user.save()
+            messages.success(request,'Your password have been succefully changed')
+            return redirect('login')
+    context = {'page':page}
+    return render(request,'user/forget_password.html')

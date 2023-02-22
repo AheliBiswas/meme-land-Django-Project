@@ -1,6 +1,6 @@
 {% load static %}
     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0 active" aria-current="page" href="{% url 'home' %}">Gallery</a></li>
-    <li class="nav-item px-2 position-relative"><a class="nav-link pt-0" aria-current="page" href="about.html">About</a></li>
+    <li class="nav-item px-2 position-relative"><a class="nav-link pt-0" aria-current="page" href="{% url 'about' %}">About</a></li>
     {% if request.user.is_authenticated %}
     <li class="nav-item px-2 position-relative"><a class="nav-link pt-0" aria-current="page" href="{% url 'logout' %}">                        
       <button class="btn btn-link text-warning p-0" type="submit">

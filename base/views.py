@@ -20,7 +20,7 @@ def home(request):
 
 @login_required(login_url='login')
 def upload_image(request):
-    page = 'Upload'
+    page = 'upload'
     genres = Genre.objects.all()
     form = ImageUploadForm()
     if request.method == 'POST':
@@ -38,15 +38,22 @@ def upload_image(request):
         # form = ImageUploadForm(request.POST,request.FILES)
         # if form.is_valid():
         #     form.save()
-        messages.success(request, 'Images has successfully uploaded.')
+        messages.success(request, 'Image has been successfully uploaded.')
         return redirect('home')
 
     context = {'form':form,'page':page,'genres':genres}
     return render(request,'base/upload_image.html',context)
 
 def homeFilter(request,pk):
+    page = 'meme-filter'
     images = imageUpload.objects.filter(genre=pk)
     page = Genre.objects.get(id=pk)
     genres = Genre.objects.all()
     context = {'images':images,'genres':genres,'page':page}
     return render(request,'base/home.html',context)
+
+
+def about(request):
+    page = 'about'
+    context = {'page':page}
+    return render(request,'base/about.html',context)
