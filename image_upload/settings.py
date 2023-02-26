@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-2p@1fep42&us3e_*k4#u86#8!jd9lw9i5vwb16iuazu35_$(gr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -87,11 +87,11 @@ WSGI_APPLICATION = 'image_upload.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'image_upload',
+        'NAME': 'railway',
         'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': '127.0.0.1',
-        'PORT':'3306',
+        'PASSWORD': '07a1gwCVQpmHwCRDg6UT',
+        'HOST': 'containers-us-west-118.railway.app',
+        'PORT':'7507',
     }
 }
 
