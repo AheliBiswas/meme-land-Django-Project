@@ -40,7 +40,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <p>
-    MemeLand is a Django-based website project where users can login/register, upload, and download memes for entertainment purposes. As memes are the new way to express yourself on technology, fun facts, and helping to build an organic community. This provided the foundation for the Project </p>
+    MemeLand is a Django-based website project where users can login/register, upload, and download memes with email authentication and forget password feature for entertainment purposes. As memes are the new way to express yourself on technology, fun facts, and helping to build an organic community. This provided the foundation for the Project </p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
