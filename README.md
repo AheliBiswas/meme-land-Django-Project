@@ -40,8 +40,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
     MemeLand is a Django-based website project where users can login/register, upload, and download memes for entertainment purposes. As memes are the new way to express yourself on technology, fun facts, and helping to build an organic community. This provided the foundation for the Project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -50,7 +48,7 @@
 <p><a href="https://themewagon.com/themes/free-html5-food-blog-website-template-yummy/"> Theme Wagon: Yummy – Free HTML5 food blog website template</a>  </p>
 
 ### Built With
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=aheliaiswas)](https://github.com/ahelibiswas/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ahelibiswas)](https://github.com/ahelibiswas/github-readme-stats)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -131,8 +129,46 @@ _⚠ Then, the development server will be started at http://127.0.0.1:8000/_
 </table>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+<table width="100%"> 
+<tr>
+<td width="50%">      
+&nbsp; 
+<br>
+<p align="center">
+  Login
+</p>
+<img src="doc_image/login.png">
+</td> 
+<td width="50%">
+<br>
+<p align="center">
+  Register
+</p>
+<img src="doc_image/register.png">  
+</td>
+</table>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<table width="100%"> 
+<tr>
+<td width="50%">      
+&nbsp; 
+<br>
+<p align="center">
+  Email Check
+</p>
+<img src="doc_image/email verification.png">
+</td> 
+<td width="50%">
+<br>
+<p align="center">
+  Password Set
+</p>
+<img src="doc_image/new password set 2.png">  
+</td>
+</table>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 
