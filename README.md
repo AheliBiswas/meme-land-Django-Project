@@ -45,7 +45,7 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Front-end By:
-<p><a href="https://themewagon.com/themes/free-html5-food-blog-website-template-yummy/"> Theme Wagon: Yummy – Free HTML5 food blog website template</a>  </p>
+<p><a href="https://themewagon.com/themes/free-bootstrap-5-photography-agency-website-template-fotogency/"> Theme Wagon: Fotogency – Free Bootstrap 5 Photography Agency Website Template</a>  </p>
 
 ### Built With
 
