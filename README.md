@@ -26,7 +26,7 @@
 <br />
 <div align="center">
   <a href="">
-    <img src="doc_image/logo.jpg" alt="Logo" width="80" height="80">
+    <img src="doc_image/logo.jpg" alt="Logo" width="90" height="90">
   </a>
 
 <h3 align="center">MemeLand - Django Meme Gallery Site</h3>
@@ -48,8 +48,12 @@
 <p><a href="https://themewagon.com/themes/free-bootstrap-5-photography-agency-website-template-fotogency/"> Theme Wagon: Fotogency – Free Bootstrap 5 Photography Agency Website Template</a>  </p>
 
 ### Built With
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ahelibiswas&layout=compact)](https://github.com/ahelibiswas/github-readme-stats)
+<p>
+1.Django Framework</p>
+<p>2.Sqllite3</p>
+<p>3.Html</p>
+<p>4.CSS</p>
+<p>5.JS</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
