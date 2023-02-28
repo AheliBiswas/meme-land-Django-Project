@@ -135,6 +135,18 @@ _⚠ Then, the development server will be started at http://127.0.0.1:8000/_
 &nbsp; 
 <br>
 <p align="center">
+  Image Upload
+</p>
+<img src="doc_image/3.png">
+</td> 
+
+
+<table width="100%"> 
+<tr>
+<td width="50%">      
+&nbsp; 
+<br>
+<p align="center">
   Login
 </p>
 <img src="doc_image/login.png">
