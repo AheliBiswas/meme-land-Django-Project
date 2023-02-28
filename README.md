@@ -48,7 +48,8 @@
 <p><a href="https://themewagon.com/themes/free-html5-food-blog-website-template-yummy/"> Theme Wagon: Yummy – Free HTML5 food blog website template</a>  </p>
 
 ### Built With
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ahelibiswas)](https://github.com/ahelibiswas/github-readme-stats)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ahelibiswas&layout=compact)](https://github.com/ahelibiswas/github-readme-stats)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
